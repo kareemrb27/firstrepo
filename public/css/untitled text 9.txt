@@ -1,0 +1,89 @@
+1. Refer a friend
+2. Gender
+3. 
+
+cd - : goes to previous directory
+ls -lSr - list all files details, Sort by Size with largest file at the bottom 
+more <filename> : to display filecontents equal to screen and allow scroll 
+touch <filename> : to create new, blank files, 
+ls -l | more : routes the result of left command to the right command. This command displays the list of files and if contains more than the page the allows to scroll using arrow keys
+ls -l > filename.txt : routes the list of files result to the filename.txt and saves. 
+for f in *.pdf; do echo $f; done  - this loops through the list of files in current folder and machtes the file pattern of *.pdf. then echo the mached result.
+find . -name ".txt" -mtime 5 - find all .txt files modified in the last 5 days. 
+alias al='ls -l'
+ps aux = list the process 
+
+
+
+
+-------------
+
+---------------
+Preparation:;
+--------------
+That could be any task. Give sometime to preparation. This will save lot of time and also effective task. 
+
+
+- Clear Priorities and Goals
+	- S M A R T (Specific Measurable Ambitious Realistic Time-related
+	
+	
+---
+Concentrate on one task: Micro switching is a bad idea.
+	- Brain will take 15 mins to come back to focus once disturbed. 
+	so avoid any disturbances or multitasking. frequent Switching of tasks will not be an efficient way
+	
+Avoid disturbances -
+	- turn off all mobile notifications (silent mode)/airplane
+	- pluck headphones and play some non disturbing music.
+meditation: Helps you to increase you concentration on a single task for a longer duration. HOw to control the Monkey mind. 
+A very important activity. Huge part of success claims due to meditation. 
+
+
+------------------20-80 Rule (The Pareto Principle)------------------
+Being Efficient != being effective:
+"80 of the benefits come from 20% of the efforts and vice-versa". 
+This a major rule on efficient vs effective:
+- 20% of words in any language contribute to the 80% of the /conversations. 
+- 20% of the work of cooking makes 80% of the difference in taste
+- <= 20% of your friends and family give you >= 80% of happiness.
+- >= 80% of the the news you read adds only 20% of new information.
+	
+This rule can be applied to any rule. Concentrate on that 20% to learn. 
+
+- Example: in organization, 20% may have 80% of the control. Find who are the persons falls in that bracket. If any person falls in 20% brackets. 
+	Do homework to getin touch with that 20% person. 
+- Identify the tasks which contribute to the 80%. 
+
+Homework:
+	Find 1-2 scenarios with wasted effort, and think about what 20% should stay and what 80% could go. 
+
+----------------Pentagon Framework----------
+Identify or list down the individual tasks and identify the relationships or dependency with other tasks. 
+The tasks which has more number of dependency takes high priority. 
+
+
+---------------Setting Deadlines and Making them Real-----------
+Parkinson's Law:
+	- "Work expands so as to fill the time available for its completion"
+
+	We do lot of work when we are in hurry or when deadlines are approaching. Why don't we hack this rule. Set an 'artificial deadlines'. 
+	-" Truly artificial deadlines are too easy to blow off or ignore".
+	
+	- Set some deadlines and complete the tasks. U wight do some mistakes in hurry. That takes to a new deadlines to revisit. Try to hack this Parkinson's Law. 
+	Hack the track. 
+
+-------------Batching Similar Tasks------------------------------
+"Batching similar tasks allows to 'amortize' (or spread) time-consuming set-up & recovery work. 
+
+"if you start thinking about batching tasks, you will find a lot of low hanging fruit'. 
+
+-------------Wheel of life --------------------------
+The good kind of multi tasking & the wheel of life
+- The Buddhist wheel of life:
+	- Career, Money, Health, Friends & Family, Significant Other/Romance, Personal Growth, Fun & Recreation, Physical Environment.  
+	
+	On any task try to find it fits in any two of above 8 categories. This will help in identifying the right task and to the we implement the task. 
+		: Ex: Learning an Russian lang from Tutor will fit in Person Growth. But if I would go to Russia and speak to native Russians then it would 
+		cross two areas, Personal Growth, Fun & Recreation. 
+	 

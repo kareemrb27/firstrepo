@@ -1,0 +1,98 @@
+Shell Learning:
+	Shell is a software that coverts user commands into marchine understandable commands. 
+
+Hardware -> Kernal -> Shell -> Termial -> User
+How to access shell: can be accessed using terminal. 
+
+-> touch -> to create an empty files.
+-> cat -> to display contents
+-> cat > fileName -> Opend empty files even if doesnt exits and data can be provide. press ctl+d to close and save.
+-> cat > file1 file2 > file3 -> merges the contents of file1 and file3 and copies to file3.
+-> rmdir, rm -d 
+- rm -f 
+- mkdir
+- cp <fileLocatin>/fileName <destFileLocation>  - copy file
+- mv <fileLocatin>/fileName <destFileLocation>  - move file
+- ln file1 file2 - any changes to file1 gets reflected in file2 since it is hard link.
+- ln -s file1 file2 - soft link - A pointer or a reference to the original address of the file.
+- umask - return 022 values. - 
+- systems subtracts umask from 666 (file) and 777(directory). 
+
+-ls - list the files and directories in current folder. 
+- ls -l --long listing. total no of blocks (1024 bites) accupied by the files and folders, sizes, file permisions, 
+- ls -a -- lists hidden files as well. 
+
+- file * -- lists the file and * indicates everything
+- wc file1 - displays no. of lines, words, characters and the file name. 
+- wc -l /wc -c /wc -w(counts of lines/characters/words)
+- sort file1 (displays contents of file1 in sorted lines. 
+
+- cut -d"-" -f 1,3 - delimits with '-' and displays first row and second row identified by delimiters.
+- dd  				-- used for conversion. 
+- dd if=file5 of=file6 conv=ucase (if= input file, op = output file, conv = convert, ucase = upper case).
+- man - displays the usage and available options with a command.
+- banner - displays test in facy large font. 
+- compress -v file1 (compress the size of file to anything less than actual. -v (to display the % of size reduced).
+- zcat file - to display the compressed files. 
+- uncompress file - uncompress the file. 
+
+----------
+shell variables: stores data, container for holding information. 
+	Have certain properties - Name of the variable can start with character or _ but not number.
+								- names are case sensitive. 
+								- command and spaces are not allowed.
+
+
+
+curl https://api.enterprise.apigee.com/v1/organizations/kareemrb27/apis -u karim_k3g1@yahoo.co.in:password
+
+grep -o configuration/entityTypes/Individual audit.dat | wc -l
+	- search for the string in a file and gets the count. -o indicated to count the multiple occurances as well in a line
+	
+grep -o \"successful\":true audit.dat | wc -l
+
+cat audit.dat|grep configuration/entityTypes/Individual > payload.txt
+	- fileter the lines with the mached string and create a new file with the data.
+cat payload.txt|wc -l
+	- count the no. of lines in a file. 
+	
+
+
+----------------------
+- 	Find and replace the \: with : in the file
+-	Filter the file with lines which contains the string "/individual" or takes a customer value from parameter 2
+-	Print the no. of records from the new file after filtering. 
+-	Proceed with the substring: before:
+-	Proceed with the substring: after:
+-	
+
+
+
+
+cat audit.dat|grep configuration/entityTypes/Individual > payload.txt
+sed -i -e 's/\\:/:/g' payload.txt
+echo:   cat payload.txt|wc -l
+
+sed -i -e 's/\]\\/\]/g' payload.txt
+
+awk '{ ending1=index($0,"\}\]\}\]"); begin1=index($0,"\[\{\"type\":\"configuration/entityTypes/Individual\""); print  substr($0,begin1,ending1+4);}' payload.txt > FILE_SUBSTRING_BEGIN.txt
+awk '{ ending1=index($0,"\}\]\}\]"); print  substr($0,1,ending1+3);}' FILE_SUBSTRING_BEGIN.txt > FILE_WITH_ONLY_PAYLOADS.txt
+
+awk '{ begin2=index($0,"updateDate\":\"");  {if (substr($0,begin2+13,13) ~ /[[:digit:]]{13}/) inc_val=substr($0,begin2+13,13)+1; sub("updateDate\":\"[[:digit:]]{13}\"","updateDate\":\"" inc_val"\"",$0)}; print $0 }' FILE_WITH_ONLY_PAYLOADS.txt > FILE_WITH_PAYLOADS_UPDATE_DATE_INCR_BY_1.txt
+
+
+
+print substr($0,begin1,"\}\]\}\]"+3);}' payload.txt > FILE_WITH_ONLY_PAYLOADS.txt  
+
+awk '{ ending1=index($0,"\}\]\}\]"); begin1=index($0,"\[\{\"type\":\"configuration/entityTypes/Individual\""); print ending1; print begin1;}' payload.txt > FILE_WITH_ONLY_PAYLOADS.txt
+  
+
+awk '{ ending1=index($0,"\}\]\}\]"); begin1=index($0,"\[\{\"type\":\"configuration/entityTypes/Individual\""); print substr($0,begin1,ending1+4);}' payload.txt > FILE_WITH_ONLY_PAYLOADS.txt
+
+
+echo substr("1395c8b2fbf90f5840d7b3c7f900b08c:452b366b63dc4ab9a53a81f702185ce3:1519594020702:WARNING:CRM3 - Reltio Send Entities [/crm/v1/reltio/sendentities]:Message processed successfully:10.31.86.143:::::::::1395c8b2fbf90f5840d7b3c7f900b08c:0:00000161b4fdcaf9-b4371:161b6e5d05ec33ffcf1bee36a8125311::0::596:57:[{"type":"configuration/entityTypes/Individual","attributes":{"Brand":[{"value":{"BrandCountry":[{"value":"USA"}],"SkinCareGoalsDesiredResults":[{"value":"DESIREDRESULTS_GRATIFICATION"}],"CreatedDt":[{"value":"2018-02-25T21:17:19Z"}],"LastVisitedDate":[{"value":"2018-02-25T21:21:00Z"}],"BrandCode":[{"value":"OAP_USA"}],"LastModifiedDt":[{"value":"2018-02-25T21:21:00Z"}],"LastLoginDate":[{"value":"2018-02-25T21:21:00Z"}]}}]},"crosswalks":[{"type":"configuration/sources/SITECORE_OAP_USA","value":"423596270","createDate":"1519611439000","updateDate":"1519611660000","sourceTable":"OAP_USA"}]}]:[{"index":0,"uri":"entities/lAFZuDa","successful":true}]\",begin1,ending1+4)
+
+
+awk '{print substr("abcabc",1,2);}'
+
+awk '{ ending1=index($0,"\}\]\}\]"); begin1=1; print  substr($0,1,ending1+3);}' FILE_WITH_ONLY_PAYLOADS.txt > FILE_WITH_ONLY_PAYLOADS.txt

@@ -1,0 +1,17 @@
+{
+  "name": "testing-app",
+  "version": "1.0.0",
+  "description": "First node application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kareem",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.3",
+    "instagram-node": "^0.5.8",
+    "nodemon": "^1.11.0"
+  }
+}
